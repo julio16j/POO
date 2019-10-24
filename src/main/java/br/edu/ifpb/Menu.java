@@ -12,17 +12,18 @@ import java.util.Scanner;
 public class Menu
 {
     public static void ExibirMenu(ContaCorrente conta) throws SaldoInsuficienteException, EntradaInvalidaException, QuantiaNegativaException {
-        System.out.println("Digite a opção Desejada: ");
-        System.out.println("(1): Saque");
-        System.out.println("(2): Deposito");
-        System.out.println("(3): Extratp");
-        System.out.println("(4): Saldo");
-        System.out.println("(5): Sair");
         int opcao;
         double valor;
         Scanner sc = new Scanner(System.in);
         try {
             while (true) {
+                System.out.println("--------------------------------------------------------------------");
+                System.out.println("Digite a opção Desejada: ");
+                System.out.println("(1): Saque");
+                System.out.println("(2): Deposito");
+                System.out.println("(3): Extratp");
+                System.out.println("(4): Saldo");
+                System.out.println("(5): Sair");
                 opcao = sc.nextInt();
                 if (opcao == 1) {
                     System.out.println("Digite a quantia que você quer: ");
@@ -49,7 +50,7 @@ public class Menu
         }
     }
     public static void main( String[] args ) throws SaldoInsuficienteException, EntradaInvalidaException, QuantiaNegativaException {
-        ContaCorrente Amilton = new ContaCorrente(3232,"Amilton Neves", 30000);
+        ContaCorrente Amilton = new ContaCorrente(3232,"Amilton Neves", 5000);
         ExibirMenu(Amilton);
     }
 }

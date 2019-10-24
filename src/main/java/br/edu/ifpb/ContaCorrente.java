@@ -3,13 +3,14 @@ package br.edu.ifpb;
 import br.edu.ifpb.Exceptions.QuantiaNegativaException;
 import br.edu.ifpb.Exceptions.SaldoInsuficienteException;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class ContaCorrente {
+
     private int numero;
     private String titular;
     private double saldo;
-    private ArrayList<Double> ExtratoLi;
+    private HashSet<Double> ExtratoLi;
     public int getNumero() {
         return numero;
     }
@@ -35,7 +36,7 @@ public class ContaCorrente {
             throw new QuantiaNegativaException();
         }
         this.saldo += valorDEP ;
-        ExtratoLi.add(this.saldo + valorDEP);
+        ExtratoLi.add(this.saldo);
         return true;
     }
 
@@ -47,7 +48,7 @@ public class ContaCorrente {
             throw new SaldoInsuficienteException();
         }
         this.saldo -= valorSAQ ;
-        ExtratoLi.add(this.saldo - valorSAQ);
+        ExtratoLi.add(this.saldo);
         return true;
     }
 
@@ -62,26 +63,41 @@ public class ContaCorrente {
 
     public void extrato(){
         for(int i = 1 ; i < this.ExtratoLi.size(); i++){
-            double Resultado = ExtratoLi.get(i) - ExtratoLi.get(i-1);
-            if ( Resultado > 0){
-                System.out.println("Deposito:\n" +
-                                   "   SaldoIni: "+ ExtratoLi.get(i-1)+"\n"+
+            double Resultado = Buscar(i, (HashSet<Double>) ExtratoLi) - Buscar(i-1, (HashSet<Double>) ExtratoLi);
+            //if ( Resultado > 0){
+                System.out.println("Transacao:\n" +
+                                   "   SaldoIni: "+ Buscar(i-1, (HashSet<Double>) ExtratoLi)+"\n"+
                                    "   Movimentação: "+ Resultado + "\n"+
-                                   "   SaldoFini: "+ ExtratoLi.get(i));
-            } else{
+                                   "   SaldoFini: "+ Buscar(i, (HashSet<Double>) ExtratoLi));
+            /*} else{
                 System.out.println("Saque:\n" +
-                        "   SaldoIni: "+ ExtratoLi.get(i-1)+"\n"+
+                        "   SaldoIni: "+ Buscar(i-1, (HashSet<Double>) ExtratoLi)+"\n"+
                         "   Movimentação: "+ Resultado + "\n"+
-                        "   SaldoFini: "+ ExtratoLi.get(i));
-            }
+                        "   SaldoFini: "+ Buscar(i, (HashSet<Double>) ExtratoLi));
+            }*/
         }
     }
+
+     public static Double Buscar(int posicao, HashSet<Double> lista)
+    {
+        int contador = 0;
+        if (lista.size() >= posicao) {
+            for (Double obj : lista) {
+                if (contador == posicao) return obj;
+                else contador++;
+            }
+        }
+
+        return null;
+    }
+
+
 
     public ContaCorrente(int numero, String titular, double saldo) {
         this.numero = numero;
         this.titular = titular;
         this.saldo = saldo;
-        this.ExtratoLi = new ArrayList<Double>();
+        this.ExtratoLi = new HashSet<>();
         this.ExtratoLi.add(this.saldo);
     }
 
@@ -89,9 +105,20 @@ public class ContaCorrente {
         this.titular = "Joao";
         this.numero = 0;
         this.saldo = 50;
-        this.ExtratoLi = new ArrayList<Double>();
+        this.ExtratoLi = new HashSet<>();
         this.ExtratoLi.add(this.saldo);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ContaCorrente)) return false;
+        ContaCorrente that = (ContaCorrente) o;
+        return getNumero() == that.getNumero();
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNumero());
+    }
 }

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4dd4f05-55e7-4e56-b75b-8dda7b86039b" name="Default Changelist" comment="" />
+    <list default="true" id="c4dd4f05-55e7-4e56-b75b-8dda7b86039b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ContaCorrente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpb/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpb/ContaCorrente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/EntradaInvalidaException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/EntradaInvalidaException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/QuantiaNegativaException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/QuantiaNegativaException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/SaldoInsuficienteException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Exceptions/SaldoInsuficienteException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpb/Menu.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -28,7 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1SLl1qmqY7f4PzgnVyZeQwqwB3T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -75,11 +89,51 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571350544992</updated>
-      <workItem from="1571350547150" duration="11313000" />
+      <workItem from="1571350547150" duration="11911000" />
+      <workItem from="1571698770615" duration="580000" />
+      <workItem from="1571700241209" duration="8434000" />
+      <workItem from="1571877941033" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/edu/ifpb/ContaCorrente.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/edu/ifpb/ContaCorrente.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/br/edu/ifpb/ContaCorrente.java</url>
+          <line>84</line>
+          <properties class="br.edu.ifpb.ContaCorrente" method="Buscar">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
